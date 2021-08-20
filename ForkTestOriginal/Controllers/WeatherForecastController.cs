@@ -23,6 +23,12 @@ namespace ForkTestOriginal.Controllers
             _logger = logger;
         }
 
+        [HttpGet("Id/{id}")]
+        public ActionResult<int> RetornarNumero(int id)
+        {
+            return Ok(id);
+        }
+
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
